@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/assistente.css') }}">
+        <title>Sandy - Assistente Virtual</title>
+
+
+    </head>
+    <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style class="cp-pen-styles">@import url(http://weloveiconfonts.com/api/?family=entypo);</style>
+    {% include 'assistente.html' %}
+
+    </body>
+    <footer>
+
+    </footer>
+</html>
+
+<!--
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Comandos:
+    - Navegar
+        - Sintaxe: {Nome} + movimento(etc)
+          - Ex: zero direita direita entrar
+          - Ex: voltar direita entrar
+    - Atalhos
+        - Sintaxe: {Nome} + pasta + ação
+	    - Ex: zero downloads abrir
+	    - Ex: zero documentos fechas
+
+
+-->

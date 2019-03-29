@@ -1,0 +1,530 @@
+<!-- Arc Reactor -->
+<div id="arc_container">
+    <div class="arc_reactor">
+        <div class="case_container">
+            <div class="e7">
+                <div class="semi_arc_3 e5_1">
+                    <div class="semi_arc_3 e5_2">
+                        <div class="semi_arc_3 e5_3">
+                            <div class="semi_arc_3 e5_4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="core2"></div>
+            </div>
+            <ul class="marks">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Left Menu -->
+<div id="leftmenu">
+    <p class="title"></p>
+    <div class="hline title_underline"></div>
+
+    <div class="menu">
+        <a href="/assistente-mobile">
+            <button class="menuitem"><span class="entypo-right-open"/>
+              <p class="caption">App Mobile</p>
+            </button>
+        </a>
+    </div>
+</div>
+
+<!-- Right Menu -->
+<div id="rightmenu">
+    <div class="esquerda_1">
+        <div class="esquerda_11">
+            <div id="date_time">
+                <div id="date" class="semi_arc e4">
+                    <div class="semi_arc_2 e4_1">
+                        <div class="counterspin4"></div>
+                    </div>
+                    <div style="font-size: 40px; margin-top: 25px;" id="dia"></div>
+                    <div style="font-size: 20px;" id="mes"></div>
+                    <div style="font-size: 10px; margin-top: 5px;" id="dia_semana"></div>
+                </div>
+                <div id="time" class="arc e1">
+                    <div style="font-size: 28 px; margin-left: 0px; margin-top: 25px;" id="horas_minutos"></div>
+                    <div style="font-size: 17px; margin-left: 0px; margin-top: 0px; display; inline;"
+                         id="segundos"></div>
+                </div>
+
+                <!--Script Data e Horas-->
+                <script>
+      setInterval(refresh, 1000)
+
+	  function refresh(){
+	    var data = new Date();
+
+        document.getElementById("dia").innerHTML = data.getDate();
+
+        var mes = data.getMonth();
+        switch(mes) {
+          case 0:
+            document.getElementById("mes").innerHTML = "Janeiro";
+            break;
+          case 1:
+            document.getElementById("mes").innerHTML = "Fevereiro";
+            break;
+          case 2:
+            document.getElementById("mes").innerHTML = "Março";
+            break;
+          case 3:
+            document.getElementById("mes").innerHTML = "Abril";
+            break;
+          case 4:
+            document.getElementById("mes").innerHTML = "Maio";
+            break;
+          case 5:
+            document.getElementById("mes").innerHTML = "Junho";
+            break;
+          case 6:
+            document.getElementById("mes").innerHTML = "Julho";
+            break;
+          case 7:
+            document.getElementById("mes").innerHTML = "Agosto";
+            break;
+          case 8:
+            document.getElementById("mes").innerHTML = "Setembro";
+            break;
+          case 9:
+            document.getElementById("mes").innerHTML = "Outubro";
+            break;
+          case 10:
+            document.getElementById("mes").innerHTML = "Novembro";
+            break;
+          case 11:
+            document.getElementById("mes").innerHTML = "Dezembro";
+            break;
+          default:
+            document.getElementById("mes").innerHTML = "Erro";
+            break;
+       }
+
+      var dia_semana = data.getDay();
+      switch(dia_semana) {
+        case 0:
+          document.getElementById("dia_semana").innerHTML = "Domingo";
+          break;
+        case 1:
+          document.getElementById("dia_semana").innerHTML = "Segunda-Feira";
+          break;
+        case 2:
+          document.getElementById("dia_semana").innerHTML = "Terça-Feira";
+          break;
+        case 3:
+          document.getElementById("dia_semana").innerHTML = "Quarta-Feira";
+          break;
+        case 4:
+          document.getElementById("dia_semana").innerHTML = "Quinta-Feira";
+          break;
+        case 5:
+          document.getElementById("dia_semana").innerHTML = "Sexta-Feira";
+          break;
+        case 6:
+          document.getElementById("dia_semana").innerHTML = "Sabado";
+          break;
+        default:
+          document.getElementById("dia_semana").innerHTML = "Erro";
+          break;
+      };
+
+	    document.getElementById("horas_minutos").innerHTML = data.getHours() + ":" +  data.getMinutes();
+		document.getElementById("segundos").innerHTML = data.getSeconds();
+	  };
+
+
+
+
+                </script>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Habilitar sintetização de Voz-->
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+
+    <script>
+            const endereco_ip_assistente = "127.0.0.1:7000";
+            const endereco_ip_raspberry = "192.168.0.104:80";
+
+            // Quando tudo estiver carregado
+             window.onload = function () {
+                // Boas Vindas
+                responsiveVoice.speak("Ativada!", "Brazilian Portuguese Female", {pitch: 1, rate: 1});
+
+                verificarFalando = setInterval( function(){
+                    if(responsiveVoice.isPlaying()){
+                        console.log("Falando");
+                    } else {
+                        console.log("Não Falando");
+                        clearInterval(verificarFalando);
+                        escutar();
+                    }
+                 },1000);
+
+                 // necessário para alterar o arco central
+                 verificarFalando2 = setInterval( function(){
+                    if(responsiveVoice.isPlaying()){
+                        console.log("Falando2");
+                        $('.arc_reactor').css({ 'box-shadow' : '0px 0px 55px 20px rgba(2, 255, 255, 0.5), inset 0px 0px 55px 20px rgba(2, 255, 255, 0.5)', });
+                    } else {
+                        console.log("Não Falando2");
+                        $('.arc_reactor').css({ 'box-shadow' : '0px 0px 50px 15px rgba(2, 255, 255, 0.3), inset 0px 0px 50px 15px rgba(2, 255, 255, 0.3)', });
+
+                    }
+                 },500);
+
+                 verificarFalando2;
+
+             }
+
+            // Sintetizar a voz
+            function falar(resposta){
+                responsiveVoice.speak(resposta, "Brazilian Portuguese Female", {pitch: 1, rate: 1});
+                verificarFalando;
+                document.getElementById("resposta").innerHTML = resposta;
+                $("#resposta").fadeTo(0, 1);
+                $("#resposta").fadeTo(4500, 0.0);
+            }
+
+
+
+            // Faz requisição de
+            function processarEntrada(frase){
+                jQuery.ajax({
+                    url: 'http://127.0.0.1:7000/processar/'+frase,
+                    type: 'get',
+                    contentType: 'application/json',
+                    success: function (resposta){
+                        falar(resposta)
+                    }
+                });
+            }
+
+            // Faz requisição de
+            function processarComando(frase){
+                jQuery.ajax({
+                    url: 'http://127.0.0.1:7000/comando/'+frase,
+                    type: 'get',
+                    contentType: 'application/json',
+                    success: function (resposta){
+                        falar(resposta)
+                    }
+                });
+            }
+
+            // Faz requisição de CPU
+            function processarCpu(frase){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_assistente +  '/cpu',
+                    type: 'get',
+                    contentType: 'application/json',
+                    success: function (resposta){
+                        document.getElementById("cpu").innerHTML = resposta;
+                    }
+                });
+            }
+            setInterval(processarCpu, 3000);
+
+            // Faz requisição de Memória
+            function processarMemoria(frase){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_assistente +  '/memoria',
+                    type: 'get',
+                    contentType: 'application/json',
+                    success: function (resposta){
+                        document.getElementById("memoria").innerHTML = resposta;
+                        $("#resposta").fadeIn(3);
+                    }
+                });
+            }
+            setInterval(processarMemoria, 6000);
+
+            // Faz requisição de temperatura
+            function processarTemperatura(frase){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_assistente +  '/temperatura',
+                    type: 'get',
+                    contentType: 'application/json',
+                    success: function (resposta){
+                        document.getElementById("temperatura").innerHTML = resposta;
+                    }
+                });
+            }
+            setInterval(processarTemperatura, 9000);
+
+
+
+            // Faz requisição SENSOR ILUMINAÇÃO
+            function getLuminosidade(){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_raspberry +  '/get-luminosidade',
+                    type: 'get',
+                    contentType: 'application/json',
+                    crossDomain: true,
+                    success: function (resposta){
+                        document.getElementById("luminosidade").innerHTML = resposta;
+                    }
+                });
+            }
+            setInterval(getLuminosidade, 3000);
+
+
+            // Faz requisição SENSOR PRESENÇA
+            function getPresenca(){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_raspberry + '/get-presenca',
+                    type: 'get',
+                    contentType: 'application/json',
+                    crossDomain: true,
+                    success: function (resposta){
+                        document.getElementById("presenca").innerHTML = resposta;
+                    }
+                });
+            }
+            setInterval(getPresenca, 2000);
+
+            // Faz requisição SERVO MOTOR
+            function getServo(){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_raspberry + '/get-servo',
+                    type: 'get',
+                    contentType: 'application/json',
+                    crossDomain: true,
+                    success: function (resposta){
+                        document.getElementById("servo").innerHTML = resposta;
+                    }
+                });
+            }
+            setInterval(getServo, 120000);
+
+
+            // Faz requisição SENSOR UMIDADE
+            function getUmidade(){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_raspberry + '/get-umidade',
+                    type: 'get',
+                    contentType: 'application/json',
+                    crossDomain: true,
+                    success: function (resposta){
+                        document.getElementById("umidade").innerHTML = resposta;
+                    }
+                });
+            }
+            setInterval(getUmidade, 5000);
+
+            // Faz requisição LAMPADA
+            function getLampadaQuarto(){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_raspberry + '/get-lampada-quarto-status',
+                    type: 'get',
+                    contentType: 'application/json',
+                    crossDomain: true,
+                    success: function (resposta){
+                        if(resposta=="1"){
+                            document.getElementById("lampada_quarto").innerHTML = "Apagada";
+                        }else{
+                            document.getElementById("lampada_quarto").innerHTML = "Acesa";
+                        }
+                    }
+                });
+            }
+            setInterval(getLampadaQuarto, 5000);
+
+
+
+            // Modificado. Sem a espera do carregamento da página como antes
+            function escutar(){
+                    var speech = window.SpeechRecognition || window.webkitSpeechRecognition
+                    var recognition;
+                    try {
+                        recognition = new SpeechRecognition();
+                    } catch (error) {
+                        recognition = new webkitSpeechRecognition();
+                    }
+                    recognition.continuous = true;
+                    recognition.start();
+                    recognition.addEventListener('result', function (e) {
+                        setTimeout(function () {
+                            console.log(e.results[e.resultIndex][0].transcript)
+                            var result = e.results[e.resultIndex][0].transcript.trim();
+                            document.getElementById("falou").innerHTML = result;
+                            // Simular o OKGoogle mas com "zero"
+                            if (result == "Sandy") {
+                                // Chamada da assistente
+                                responsiveVoice.speak("Pois sim...", "Brazilian Portuguese Female");
+                                document.getElementById("resposta").innerHTML = "Pois sim...";
+                                window.auxiliar = true;
+                                $("#resposta").fadeTo(0, 1);
+                                $("#resposta").fadeTo(4000, 0.0);
+                                verificarFalando;
+                            } else if (window.auxiliar == true){
+                                // Intenções e Emoções
+                                 window.auxiliar = false;
+                                 processarEntrada(result);
+                            } else if ((result.split(' ')[0] == "comando") || (result.split(' ')[0] == "Comando")){
+                                 // Comandos de navegação
+                                 resposta = processarComando(result);
+                            } else {
+                                 console.log("Ignorou - Quando eu falar qualquer coisa sem chamá-la");
+                                 // Ignore
+                                 // Exige que chame o assistente
+                            }
+                        }, 50)
+                    }, false);
+                    if (window.SpeechRecognition || window.webkitSpeechRecognition) {
+                    } else {
+                        alert('Este navegador não suporta esta funcionalidade.');
+                    }
+
+                    // Reiniciar a API para escutar constantemente
+                      recognition.onend = function() {
+                      console.log("Reiniciando Escutar");
+                      escutar();
+                    };
+                }
+
+                // Executar quando iniciar
+                processarCpu();
+                processarMemoria();
+                processarTemperatura();
+                getLuminosidade();
+                getPresenca();
+                getServo();
+                getLampadaQuarto();
+                getUmidade();
+
+
+
+
+
+    </script>
+
+
+    <div class="chat">
+        Diga Algo:
+        <span id="falou"></span>
+    </div>
+    <div style="background-color:#FFFFFF;
+    height: 100px;
+    display: table;
+    padding: 10px;
+    border-radius: 10px ;
+    position-fixed: top">
+
+    </div>
+
+
+</div>
+
+
+</div>
+
+
+<div>
+    <span class="textoFalar" id="resposta"></span>
+</div>
+
+
+<div class="baixo">
+              <span class="entypo-gauge performance" style="font-size: 30px; margin-left: 10px;"
+                    title="Processamento de cada CPU do computador.">
+                <p id="cpu" class="caption" style="font-size: 20px;">Procurando... </p>
+              </span>
+
+    <span class="entypo-chart-area performance" style="font-size: 30px; margin-left: 10px;"
+          title="Memória RAM utilizado pelo computador.">
+                <p id="memoria" class="caption" style="font-size: 20px;">Procurando... </p>
+              </span>
+
+    <span class="entypo-thermometer performance" style="font-size: 30px; margin-left: 10px;"
+          title="Temperatura do processador do computador">
+                <p id="temperatura" class="caption" style="font-size: 20px;">Procurando... </p>
+              </span>
+    <span class="entypo-light-up performance" style="font-size: 30px; margin-left: 10px;"
+          title="Iluminação ambiente: Sendo 0(zero) totalmente ilumidado.">
+                <p id="luminosidade" class="caption" style="font-size: 20px;">Procurando... </p>
+              </span>
+    <span class="entypo-eye performance" style="font-size: 30px; margin-left: 10px;"
+          title="Estado atual do ambiente detectado pelo sensor.">
+                <p id="presenca" class="caption" style="font-size: 20px;">Procurando... </p>
+              </span>
+    </span>
+    <span class="entypo-droplet performance" style="font-size: 30px; margin-left: 10px;"
+          title="Estado de umidade atual do solo.">
+                <p id="umidade" class="caption" style="font-size: 20px;">Procurando... </p>
+              </span>
+    <span class="entypo-lamp performance" style="font-size: 30px; margin-left: 10px;"
+          title="Estado atual da lâmpada do quarto principal.">
+                <p id="lampada_quarto" class="caption" style="font-size: 20px;">Procurando... </p>
+              </span>
+    <span class="entypo-switch performance" style="font-size: 30px; margin-left: 10px;"
+          title="Tranca eletrônica temporizada. 2 min.">
+                <p id="servo" class="caption" style="font-size: 20px;">Procurando... </p>
+</div>

@@ -1,0 +1,85 @@
+- Para executar:
+    python nome.py
+
+
+- Descrição
+Três fluxos principais
+    1 - Executar um comando local explícito. (Estático)
+        - Comandos
+            *
+            *
+            *
+            *
+
+    2 - Detectar uma Emoção, entre as 7 (Dinâmico)
+        - Emoções
+            * Alegria
+            * Desgosto
+            * Medo
+            * Raiva
+            * Surpresa
+            * Tristeza
+            * Neutro
+
+    3 - Executar um comando local através da descoberta da intenção. (Dinâmico)
+        - Intenções
+            * Abrir a página do facebook
+                # Exemplo de comando
+                - Abra o facebook
+                - Abrir meu facebook
+            * Fechar página do facebook
+                # Exemplo de comando
+                - Sair do facebook
+                - Fechar o facebook
+            * Abrir a página do github
+                # Exemplo de comando
+                - Abra o github
+                - Git
+            * Abrir página do yutube
+                # Exemplo de comando
+                - Abrir o youtube
+                - Pode abrir o yutube
+            * Buscar sinônimo de alguma palavra
+                # Exemplo de comando
+                - Sinônimo de "Palavra"
+                - Buscar o sinônimo de "Palavra"
+            * Buscar antônimo de alguma palavra
+                # Exemplo de comando
+                - Antônimo de "Palavra"
+                - Buscar o Antônimo de "Palavra"
+            * Buscar significado de alguma palavra
+                # Exemplo de comando
+                - Significado de "Palavra"
+                - Buscar o significado de "Palavra
+            * Buscar a tradução de "Palavra"
+                # Exemplo de comando
+                - O que significa em inglês "palavra"
+                - Tradução de "palavra"
+            * Saber as horas
+                # Exemplo de comando
+                - Quantas horas são?
+                - Horário
+            * Obter a previsão do tempo
+                # Exemplo de comando
+                - Qual a previsão do tempo para hoje?
+                - Vai chover?
+            * Aumentar volume
+                # Exemplo de comando
+                - Aumenta o volume ai
+                - Sobe o volume
+            * Diminuir volume
+                # Exemplo de comando
+                - Diminui o volume ai
+                - Abaixa o volume
+            * Reproduzir música
+                # Exemplo de comando
+                - Ouvir música
+                - Toca uma música
+            * Efetuar uma pesquisa
+                # Exemplo de comando
+                - Pesquisar por "o que você quer pesquisar"
+                - Buscar por "o que você quer pesquisar"
+            * Ouvir uma piada
+                # Exemplo de comando
+                - Conte me uma piada
+                - Conte algo engraçado
