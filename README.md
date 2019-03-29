@@ -1,0 +1,1 @@
+# Sandy-Assistente-Virtual-Para-Automa-o
