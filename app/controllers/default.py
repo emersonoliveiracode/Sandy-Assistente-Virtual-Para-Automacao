@@ -1,21 +1,25 @@
 from app import app, db
 from flask import Flask, render_template, Response, request, redirect, url_for, flash
+
+
+# Retorna informações acerca do hardware
 import psutil
 import requests
+
 
 # Bases
 from app.controllers.bases.bot import Bot
 from app.controllers.bases.comandos_processamento import ComandosProcessamento
 
 
-import os, json
-
 endereco_ip_assistente = "127.0.0.1:7000"
 endereco_ip_raspberry = "192.168.0.104:80"
+
 
 @app.route('/')
 def home():
     return render_template('/index.html')
+
 
 @app.route('/assistente-mobile')
 def assistente_mobile():
@@ -52,6 +56,7 @@ def iluminacao():
         return "Nível de iluminação igual a " + str(r.text) + res
     return "Uaaau... Está bem escuro aqui! Melhor acender uma lâmpada!"
 
+
 @app.route('/lampada_quarto_status', methods=['GET'])
 def lampada_quarto_status():
     r = requests.get('http://' + endereco_ip_raspberry + '/get-lampada-quarto-status')
@@ -61,15 +66,18 @@ def lampada_quarto_status():
     else:
         return "A lâmpada está ligada!"
 
+
 @app.route('/set-ligar-lampada-quarto', methods=['GET'])
 def set_ligar_lampada_quarto():
     r = requests.get('http://' + endereco_ip_raspberry + '/set-lampada-quarto/0')
     return "Pronto! Acabei de acender."
 
+
 @app.route('/set-desligar-lampada-quarto', methods=['GET'])
 def set_desligar_lampada_quarto():
     r = requests.get('http://' + endereco_ip_raspberry + '/set-lampada-quarto/1')
     return "Ok! Apagada."
+
 
 import re, unicodedata
 ####
@@ -120,8 +128,3 @@ def processar(frase):
         return resposta
     else:
         return classe
-
-#os.system("nohup x-terminal-emulator -e cvlc -Z /home/emerson/Música &")
-
-
-
