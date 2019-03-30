@@ -1,20 +1,17 @@
 from app import app, db
 from flask import Flask, render_template, Response, request, redirect, url_for, flash
 
+from app.controllers.bases.bot import Bot
+from app.controllers.bases.comandos_processamento import ComandosProcessamento
 
-# Retorna informações acerca do hardware
+import re, unicodedata
 import psutil
 import requests
 
 
-# Bases
-from app.controllers.bases.bot import Bot
-from app.controllers.bases.comandos_processamento import ComandosProcessamento
-
 
 endereco_ip_assistente = "127.0.0.1:7000"
 endereco_ip_raspberry = "192.168.0.104:80"
-
 
 @app.route('/')
 def home():
@@ -79,10 +76,10 @@ def set_desligar_lampada_quarto():
     return "Ok! Apagada."
 
 
-import re, unicodedata
-####
+
+
 # Normalizar, retirar acentos e caixa baixa.
-####
+
 def normalizar(frase):
     nova_frase = frase.lower()
     # Unicode normalize transforma um caracter em seu equivalente em latin.

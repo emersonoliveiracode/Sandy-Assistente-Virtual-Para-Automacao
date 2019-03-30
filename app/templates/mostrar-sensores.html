@@ -1,0 +1,167 @@
+<script>
+                        // Faz requisição de CPU
+                        // Faz requisição de CPU
+            function processarCpu(frase){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_assistente +  '/cpu',
+                    type: 'get',
+                    contentType: 'application/json',
+                    success: function (resposta){
+                        document.getElementById("cpu").innerHTML = resposta;
+                    }
+                });
+            }
+            setInterval(processarCpu, 3000);
+
+            // Faz requisição de Memória
+            function processarMemoria(frase){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_assistente +  '/memoria',
+                    type: 'get',
+                    contentType: 'application/json',
+                    success: function (resposta){
+                        document.getElementById("memoria").innerHTML = resposta;
+                        $("#resposta").fadeIn(3);
+                    }
+                });
+            }
+            setInterval(processarMemoria, 6000);
+
+            // Faz requisição de temperatura
+            function processarTemperatura(frase){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_assistente +  '/temperatura',
+                    type: 'get',
+                    contentType: 'application/json',
+                    success: function (resposta){
+                        document.getElementById("temperatura").innerHTML = resposta;
+                    }
+                });
+            }
+            setInterval(processarTemperatura, 9000);
+
+
+
+            // Faz requisição SENSOR ILUMINAÇÃO
+            function getLuminosidade(){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_raspberry +  '/get-luminosidade',
+                    type: 'get',
+                    contentType: 'application/json',
+                    crossDomain: true,
+                    success: function (resposta){
+                        document.getElementById("luminosidade").innerHTML = resposta;
+                    }
+                });
+            }
+            setInterval(getLuminosidade, 3000);
+
+
+            // Faz requisição SENSOR PRESENÇA
+            function getPresenca(){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_raspberry + '/get-presenca',
+                    type: 'get',
+                    contentType: 'application/json',
+                    crossDomain: true,
+                    success: function (resposta){
+                        document.getElementById("presenca").innerHTML = resposta;
+                    }
+                });
+            }
+            setInterval(getPresenca, 2000);
+
+            // Faz requisição SERVO MOTOR
+            function getServo(){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_raspberry + '/get-servo',
+                    type: 'get',
+                    contentType: 'application/json',
+                    crossDomain: true,
+                    success: function (resposta){
+                        document.getElementById("servo").innerHTML = resposta;
+                    }
+                });
+            }
+            setInterval(getServo, 120000);
+
+
+            // Faz requisição SENSOR UMIDADE
+            function getUmidade(){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_raspberry + '/get-umidade',
+                    type: 'get',
+                    contentType: 'application/json',
+                    crossDomain: true,
+                    success: function (resposta){
+                        document.getElementById("umidade").innerHTML = resposta;
+                    }
+                });
+            }
+            setInterval(getUmidade, 5000);
+
+            // Faz requisição LAMPADA
+            function getLampadaQuarto(){
+                jQuery.ajax({
+                    url: 'http://' + endereco_ip_raspberry + '/get-lampada-quarto-status',
+                    type: 'get',
+                    contentType: 'application/json',
+                    crossDomain: true,
+                    success: function (resposta){
+                        if(resposta=="1"){
+                            document.getElementById("lampada_quarto").innerHTML = "Apagada";
+                        }else{
+                            document.getElementById("lampada_quarto").innerHTML = "Acesa";
+                        }
+                    }
+                });
+            }
+            setInterval(getLampadaQuarto, 5000);
+
+            // Executar quando iniciar
+            processarCpu();
+            processarMemoria();
+            processarTemperatura();
+            getLuminosidade();
+            getPresenca();
+            getServo();
+            getLampadaQuarto();
+            getUmidade();
+
+</script>
+
+<span class="entypo-gauge performance" style="font-size: 30px; margin-left: 10px;"
+      title="Processamento de cada CPU do computador.">
+                <p id="cpu" class="caption" style="font-size: 20px;">Procurando... </p>
+              </span>
+
+<span class="entypo-chart-area performance" style="font-size: 30px; margin-left: 10px;"
+      title="Memória RAM utilizado pelo computador.">
+                <p id="memoria" class="caption" style="font-size: 20px;">Procurando... </p>
+              </span>
+
+<span class="entypo-thermometer performance" style="font-size: 30px; margin-left: 10px;"
+      title="Temperatura do processador do computador">
+                <p id="temperatura" class="caption" style="font-size: 20px;">Procurando... </p>
+              </span>
+<span class="entypo-light-up performance" style="font-size: 30px; margin-left: 10px;"
+      title="Iluminação ambiente: Sendo 0(zero) totalmente ilumidado.">
+                <p id="luminosidade" class="caption" style="font-size: 20px;">Procurando... </p>
+              </span>
+<span class="entypo-eye performance" style="font-size: 30px; margin-left: 10px;"
+      title="Estado atual do ambiente detectado pelo sensor.">
+                <p id="presenca" class="caption" style="font-size: 20px;">Procurando... </p>
+              </span>
+</span>
+<span class="entypo-droplet performance" style="font-size: 30px; margin-left: 10px;"
+      title="Estado de umidade atual do solo.">
+                <p id="umidade" class="caption" style="font-size: 20px;">Procurando... </p>
+              </span>
+<span class="entypo-lamp performance" style="font-size: 30px; margin-left: 10px;"
+      title="Estado atual da lâmpada do quarto principal.">
+                <p id="lampada_quarto" class="caption" style="font-size: 20px;">Procurando... </p>
+              </span>
+<span class="entypo-switch performance" style="font-size: 30px; margin-left: 10px;"
+      title="Tranca eletrônica temporizada. 2 min.">
+        <p id="servo" class="caption" style="font-size: 20px;">Procurando... </p>
+</span>
