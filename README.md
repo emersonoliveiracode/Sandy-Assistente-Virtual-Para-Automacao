@@ -14,6 +14,13 @@ Recomendo a utilização de um ambiente virtual, no meu caso o virtualenvwrapper
 ```
 mkvirtualenv nome -p python3.6
 ```
+
+Pode ser necessária a instalação do pacote python-dev
+
+```
+sudo apt-get install python-dev
+```
+
 ## Créditos para: Emerson Pereira Oliveira
 
 https://github.com/emersonoliveiracode/Sandy-Assistente-Virtual-Para-Automacao/
