@@ -2,6 +2,8 @@
 
 Aplicação criada com o intuito de centralizaratravés de um servidor web, a automação de residências e computadores Linux-Ubuntu, através de intrerface gráfica ou comandos de voz.
 
+https://virtualenvwrapper.readthedocs.io/en/latest/install.html
+
 ### Pré-requisitos
 
 A aplicação requer um ambiente Linux-Ubuntu disponível para funcionar como um servidor e configurado. Após clonar este projeto, esta configuração pode ser facilmente obtida através do comando a seguir: 
